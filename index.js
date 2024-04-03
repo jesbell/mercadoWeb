@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const exphbs = require("express-handlebars");
-const productos = ['Banana', 'Cebollas', 'Lechuga', 'Papas', 'Pimenton', 'Tomate'];
+const productos = ['banana', 'cebollas', 'lechuga', 'papas', 'pimenton', 'tomate'];
 
 
 
@@ -17,8 +17,12 @@ app.engine(
 
 app.use("/css", express.static(__dirname + "/node_modules/bootstrap/dist/css"));
 
+const path = require("path");
+//Definiendo carpeta "assets" como pública
+app.use(express.static(path.join(__dirname, "assets")));
+
 app.get("/", (req, res) => {
-    res.render("main");
+    res.render("main", {productos});
 });
 
 

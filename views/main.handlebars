@@ -11,6 +11,14 @@
 <body>
     {{> Menu }}
 
+    <!-- Iteración para renderizar los productos -->
+    <section id="prodIterar">
+            {{#each productos}}
+                {{> Productos nombre=this}}
+            {{/each}}
+        
+    </section>
+    
 </body>
 </html>   
 
