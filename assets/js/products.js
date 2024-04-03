@@ -1,10 +1,10 @@
-console.log("HOLAAAAA");
+//console.log("HOLAAAAA");
 const imagenes = document.querySelectorAll('.producto img');
 let carritoCompra = [];
 
-// Función para manejar el evento de clic en una imagen
+// Función de acción del clic en una imagen
 function eventoClick(event) {
-    const imagen = event.target; // Obtener la imagen clicada
+    const imagen = event.target; // Obtener la imagen seleccionada
     const nameImagen = imagen.alt; // Obtener nombre de la imagen
     if (imagen.classList.contains('selected')) {
         // si magen ya seleccionada, quitar de arreglo
@@ -23,4 +23,12 @@ function eventoClick(event) {
 // Asignar el evento de clic a todas las imágenes
 imagenes.forEach(imagen => {
     imagen.addEventListener('click', eventoClick);
+});
+
+$("#btncarrito").on( "click", function() {
+    $('#exampleModal').modal('show');
+    $('#carritoContenido').empty();
+    carritoCompra.forEach(function(item) {
+        $('#carritoContenido').append('<li>' + item + '</li>');
+    });
 });
