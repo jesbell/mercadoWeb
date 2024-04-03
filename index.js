@@ -14,10 +14,12 @@ app.engine(
         partialsDir: __dirname + "/views/partials/",
     })
 );
-
-app.use("/css", express.static(__dirname + "/node_modules/bootstrap/dist/css"));
-
 const path = require("path");
+
+app.use("/css", express.static(path.join(__dirname + "/node_modules/bootstrap/dist/css")));
+app.use("/jquery", express.static(path.join(__dirname, "/node_modules/jquery/dist")));
+app.use("/js", express.static(path.join(__dirname, "/node_modules/bootstrap/dist/js")));
+
 //Definiendo carpeta "assets" como pública
 app.use(express.static(path.join(__dirname, "assets")));
 
