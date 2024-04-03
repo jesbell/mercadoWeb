@@ -6,20 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
     {{> Menu }}
 
-    <!-- Iteración para renderizar los productos -->
-    <section id="prodIterar">
-            {{#each productos}}
-                {{> Productos nombre=this}}
-            {{/each}}
-        
-    </section>
+    <div class="container">
+        <!-- Iteracion renderizar los productos -->
+        <section id="prodIterar">
+            <div class="d-flex flex-wrap justify-content-center">
+                {{#each productos}}
+                    <div class="col-md-3">
+                        <div class="justify-content-center">
+                            {{> Productos nombre=this}}
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </section>
+    </div>
+
+    
+    
     <script src="/js/bootstrap.min.js"></script>
     <script src="/jquery/jquery.slim.min.js"></script>
+    <script src="/js/products.js"></script>
 </body>
 </html>   
 

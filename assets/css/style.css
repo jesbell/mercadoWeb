@@ -1,0 +1,8 @@
+.producto img {
+    width: 150px; 
+    height: auto; 
+}
+
+.selected {
+    opacity: 0.5;
+}
