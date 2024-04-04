@@ -1,8 +1,10 @@
+/* Tamaño de las imagenes */
 .producto img{
     width: 150px; 
     height: auto; 
 }
 
+/* Baja la opacidad de los productos seleccionados */
 .selected {
     opacity: 0.5;
 }

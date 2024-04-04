@@ -1,6 +1,10 @@
+// Creando instancia express
 const express = require("express");
+// Guardamos en una constante app 
 const app = express();
+// Creando express-handlebars
 const exphbs = require("express-handlebars");
+// Arreglo de productos
 const productos = ['banana', 'cebollas', 'lechuga', 'papas', 'pimenton', 'tomate'];
 const path = require("path");
 
@@ -14,7 +18,7 @@ app.engine(
     })
 );
 
-// Ruta archivos estaticos. 
+// Rutas archivos estaticos. 
 app.use("/css", express.static(path.join(__dirname + "/node_modules/bootstrap/dist/css")));
 app.use("/jquery", express.static(path.join(__dirname, "/node_modules/jquery/dist")));
 app.use("/js", express.static(path.join(__dirname, "/node_modules/bootstrap/dist/js")));
