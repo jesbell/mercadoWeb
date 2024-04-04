@@ -4,10 +4,10 @@ let carritoCompra = [];
 
 // Función de acción del clic en una imagen
 function eventoClick(event) {
-    const imagen = event.target; // Obtener la imagen seleccionada
+    const imagen = event.target; // Obtiene la imagen seleccionada
     const nameImagen = imagen.alt; // Obtener nombre de la imagen
     if (imagen.classList.contains('selected')) {
-        // si magen ya seleccionada, quitar de arreglo
+        // Si la imagen ya seleccionada, quitar de arreglo
         const index = carritoCompra.indexOf(nameImagen);
         if (index !== -1) {
             carritoCompra.splice(index, 1);
@@ -20,15 +20,18 @@ function eventoClick(event) {
     //console.log(carritoCompra);
 }
 
-// Asignar el evento de clic a todas las imágenes
+// Asigna el evento de clic a todas las imágenes y llama a la función eventoClick
 imagenes.forEach(imagen => {
     imagen.addEventListener('click', eventoClick);
 });
 
+// Muestra y agrega la información al Modal
 $("#btncarrito").on( "click", function() {
     $('#exampleModal').modal('show');
     $('#carritoContenido').empty();
-    carritoCompra.forEach(function(item) {
-        $('#carritoContenido').append('<li>' + item + '</li>');
+    var container = $('<div class="d-flex flex-wrap justify-content-center"></div>'); // flexible
+    carritoCompra.forEach(function(p) {
+        container.append('<div class="producto"><img src="img/' + p + '.png" alt="' + p + '"></div>');
     });
+    $('#carritoContenido').append(container);
 });
