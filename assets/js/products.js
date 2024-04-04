@@ -1,23 +1,25 @@
-//console.log("HOLAAAAA");
+// Selecciona todas las imágenes de productos
 const imagenes = document.querySelectorAll('.producto img');
+// arreglo vacío para almacenar los productos
 let carritoCompra = [];
 
 // Función de acción del clic en una imagen
 function eventoClick(event) {
     const imagen = event.target; // Obtiene la imagen seleccionada
-    const nameImagen = imagen.alt; // Obtener nombre de la imagen
+    const nameImagen = imagen.alt; // Obtiene nombre de la imagen
     if (imagen.classList.contains('selected')) {
-        // Si la imagen ya seleccionada, quitar de arreglo
+        // Si la imagen esta ya seleccionada, quitar de arreglo
         const index = carritoCompra.indexOf(nameImagen);
+        // Nos aseguramos que exista la imagen para quitarla del arreglo y aguardamos su indice
         if (index !== -1) {
             carritoCompra.splice(index, 1);
         }
     } else {
-        // Si imagen no está seleccionada, agrega a carrito
+        // Si imagen no está seleccionada, agrega al arreglo carritoCompra
         carritoCompra.push(nameImagen);
     }
+    //Alternando la clase selected
     imagen.classList.toggle('selected');
-    //console.log(carritoCompra);
 }
 
 // Asigna el evento de clic a todas las imágenes y llama a la función eventoClick
