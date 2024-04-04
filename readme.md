@@ -11,17 +11,17 @@ En el inicio podremos ver los alimentos que ofrece, y el modal esta funcionando 
 
 | Vista Principal | Vista modal |
 | --- | --- |
-| ![Vista_Principal](/)| ![modal](/) |
+| ![Vista_Principal](/assets/img/principal.png)| ![modal](/assets/img/modal.png) |
 
 Se pueden seleccionar elementos para agregarlos al carrito de compras, los alimentos seleccionados cambiaran su opacidad, si se vuelve a seleccionar ese mismo elemento, volverá a su opacidad normal.
 | Algunos elementos seleccionados | Elementos deseleccionados  |
 | --- | --- |
-| ![elementos_seleccionados_1](/)| ![elementos_seleccionados_2](/) |
+| ![elementos_seleccionados_1](/assets/img/seleccionados1.png)| ![elementos_seleccionados_2](/assets/img/seleccionados2.png) |
 
 Los elementos seleccionados se agregaran al carrito de compras y pueden ser visualizados al abrir el modal, en el menu: CARRITO DE COMPRA
 | Vista Modal 1 | Vista Modal 2   |
 | --- | --- |
-| ![modal_1](/)| ![modal_2](/) |
+| ![modal_1](/assets/img/modal1.png)| ![modal_2](/assets/img/modal2.png) |
 
 ## Empezando 🚀
 
