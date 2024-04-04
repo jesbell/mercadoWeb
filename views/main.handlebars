@@ -15,14 +15,15 @@
     {{> Menu }}
 
     <div class="container">
+        <section>
+            {{> mensajeBienvenida }}
+        </section>
         <!-- Iteracion renderizar los productos -->
         <section id="prodIterar">
             <div class="d-flex flex-wrap justify-content-center">
                 {{#each productos}}
                     <div class="col-md-3">
-                        <div class="justify-content-center">
                             {{> Productos nombre=this}}
-                        </div>
                     </div>
                 {{/each}}
             </div>
